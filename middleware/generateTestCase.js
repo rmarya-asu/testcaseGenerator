@@ -41,6 +41,7 @@ var generateRound = function(){
 
 var generateHole = function(){
   var arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,"finished"];
+  //increasing the frequency of "finished"?
   return arr[generateRandom(arr.length)];
 }
 
@@ -57,7 +58,12 @@ var generatePar = function(){
 var generateNewPlayer = function(){
   var players = new Array();
   for(var i=0;i<4;i++){
-    players.push(new Player(generateLastName(),generateFirstInitial(),generateScore(),generateHole()));
+    if(i==3){
+      players.push(new Player(generateLastName(),generateFirstInitial(),generateScore(),"finished"));
+
+    }else{
+      players.push(new Player(generateLastName(),generateFirstInitial(),generateScore(),generateHole()));
+    }
   }
   return players;
 }
