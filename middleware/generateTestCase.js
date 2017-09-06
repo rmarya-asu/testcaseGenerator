@@ -60,12 +60,17 @@ var generateInvalidPlayers = function(){
   return players;
 }
 
+var generateAward = function(){
+  var arr = [10000,100000,1000,200000,50000];
+  return arr[generateRandom(arr.length)];
+}
+
 var generateTestCase = (req, res, next) => {
     //first initialize players
     console.log("made it here 1");
     var award = 840000;
     var yardage = 6905;
-    var tour= new Tournament(generateNewName(),generateValidYear(),award,yardage,generatePar(),generateRound(),generateNewPlayer());
+    var tour= new Tournament(generateNewName(),generateValidYear(),generateAward(),yardage,generatePar(),generateRound(),generateNewPlayer());
     next(tour);
     //console.log(newRandomTournament);
     //return json.stringify(newRandomTournament);
@@ -75,7 +80,7 @@ var generateTestCase = (req, res, next) => {
 var generateFailCase = (req,res,next) =>{
   var award = 840000;
   var yardage = 6905;
-  var tour= new Tournament(generateInvalidName(),generateInvalidNumber(),award,yardage,generateInvalidNumber(),generateInvalidNumber(),generateInvalidPlayers());
+  var tour= new Tournament(generateInvalidName(),generateInvalidNumber(),generateInvalidNumber(),yardage,generateInvalidNumber(),generateInvalidNumber(),generateInvalidPlayers());
   next(tour);
 }
 
