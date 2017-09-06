@@ -25,6 +25,16 @@ var generateNewName = function(){
   return arr[generateRandom(arr.length)];
 }
 
+var generateLastName = function(){
+  var arr=["Montgomerie","Fulke","Jerry","Bart"]
+  return arr[generateRandom(arr.length)];
+}
+
+var generateFirstInitial = function(){
+  var arr =["A","B","C","D"];
+  return arr[generateRandom(arr.length)];
+}
+
 var generateRound = function(){
   return generateRandom(4)+1;
 }
@@ -47,7 +57,7 @@ var generatePar = function(){
 var generateNewPlayer = function(){
   var players = new Array();
   for(var i=0;i<4;i++){
-    players.push(new Player(generateNewName(),generateNewName(),generateScore(),generateHole()));
+    players.push(new Player(generateLastName(),generateFirstInitial(),generateScore(),generateHole()));
   }
   return players;
 }
