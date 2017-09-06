@@ -14,6 +14,7 @@ function Tournament(name, year, award, yardage, par, round, players) {
   this.name = name;
   this.year = year;
   this.yardage = yardage;
+  this.award=award;
   this.par = par;
   this.round = round;
   this.players = players;
