@@ -21,17 +21,17 @@ var generateInvalidNumber = function(){
 
 var generateNewName = function(){
   //return a random string
-  var arr = ["test","test_name","test name","123Name","test123","!@#%%^","Montgomerie","C","P","Fulke"];
+  var arr = ["test","test_name","test name","123Name","test123","!@#%%^"];
   return arr[generateRandom(arr.length)];
 }
 
 var generateLastName = function(){
-  var arr=["Montgomerie","Fulke","Jerry","Bart"]
+  var arr=["Montgomerie","Fulke","Jones","Chris","Stone"]
   return arr[generateRandom(arr.length)];
 }
 
 var generateFirstInitial = function(){
-  var arr =["A","B","C","D"];
+  var arr =["A","B","C","D","E","F","G","H","I","J","K","L"];
   return arr[generateRandom(arr.length)];
 }
 
