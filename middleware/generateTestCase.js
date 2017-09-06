@@ -26,12 +26,12 @@ var generateNewName = function(){
 }
 
 var generateLastName = function(){
-  var arr=["Montgomerie","Fulke","Jones","Chris","Stone","King","Redmond","David","George"];
+  var arr=["Montgomerie","Fulke","Jones","Chris","Stone","King","Redmond","David","George","Paul","Quincy","Victor"];
   return arr[generateRandom(arr.length)];
 }
 
 var generateFirstInitial = function(){
-  var arr =["A","B","C","D","E","F","G","H","I","J","K","L","M"];
+  var arr =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   return arr[generateRandom(arr.length)];
 }
 
